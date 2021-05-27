@@ -1,0 +1,7 @@
+target 'EhB-IOS-Werkstuk2' do
+  use_frameworks!
+
+  pod "FSInteractiveMap"
+  pod "Charts"
+
+end

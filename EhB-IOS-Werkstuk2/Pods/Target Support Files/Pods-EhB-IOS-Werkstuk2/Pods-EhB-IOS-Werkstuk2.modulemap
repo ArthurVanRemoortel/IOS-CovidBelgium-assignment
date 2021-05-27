@@ -1,0 +1,6 @@
+framework module Pods_EhB_IOS_Werkstuk2 {
+  umbrella header "Pods-EhB-IOS-Werkstuk2-umbrella.h"
+
+  export *
+  module * { export * }
+}

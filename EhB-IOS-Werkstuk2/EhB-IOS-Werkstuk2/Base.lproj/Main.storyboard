@@ -1,24 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tOw-D8-1mD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Data-->
+        <scene sceneID="eHb-ES-pKT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="8Cw-Rp-0Nt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jWA-Ji-6qY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="w4M-Wz-oDo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Data" image="info.circle" catalog="system" id="OJU-dM-LTz"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h76-ee-Hc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2447.826086956522" y="632.8125"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="CBw-YA-54i">
+            <objects>
+                <viewController id="e8Y-ad-iaA" customClass="HomeViewController" customModule="EhB_IOS_Werkstuk2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sWG-w0-eKe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quO-3U-Ka3">
+                                <rect key="frame" x="0.0" y="281" width="414" height="414"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="ipl-kI-vCo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbO-FK-WcZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="286"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID Belgie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4H-0L-UWv">
+                                        <rect key="frame" x="24" y="52" width="368" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-qp-VGG">
+                                        <rect key="frame" x="220" y="191" width="147" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Brussels"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everything you need to know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OU-Pf-eJb">
+                                        <rect key="frame" x="24" y="96" width="368" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRW-yD-0db">
+                                        <rect key="frame" x="42" y="191" width="141" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Belgium"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="8OU-Pf-eJb" firstAttribute="leading" secondItem="JbO-FK-WcZ" secondAttribute="leading" constant="24" id="CSg-Hh-slt"/>
+                                    <constraint firstItem="8OU-Pf-eJb" firstAttribute="top" secondItem="R4H-0L-UWv" secondAttribute="bottom" constant="-4" id="GQ1-Kk-T9E"/>
+                                    <constraint firstItem="R4H-0L-UWv" firstAttribute="leading" secondItem="JbO-FK-WcZ" secondAttribute="leading" constant="24" id="L58-g4-XDi"/>
+                                    <constraint firstAttribute="trailing" secondItem="R4H-0L-UWv" secondAttribute="trailing" constant="22" id="Ukc-UY-nkR"/>
+                                    <constraint firstAttribute="trailing" secondItem="8OU-Pf-eJb" secondAttribute="trailing" constant="22" id="cSO-4l-4KD"/>
+                                    <constraint firstItem="R4H-0L-UWv" firstAttribute="top" secondItem="JbO-FK-WcZ" secondAttribute="top" constant="52" id="sfJ-Rj-72u"/>
+                                    <constraint firstAttribute="bottom" secondItem="8OU-Pf-eJb" secondAttribute="bottom" constant="167" id="vug-36-CwT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Hb-Rd-oTB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="quO-3U-Ka3" firstAttribute="centerY" secondItem="sWG-w0-eKe" secondAttribute="centerY" constant="40" id="73g-24-HSz"/>
+                            <constraint firstItem="JbO-FK-WcZ" firstAttribute="top" secondItem="sWG-w0-eKe" secondAttribute="top" id="BP8-B9-3Ii"/>
+                            <constraint firstItem="quO-3U-Ka3" firstAttribute="leading" secondItem="JbO-FK-WcZ" secondAttribute="leading" id="BRm-nu-S2S"/>
+                            <constraint firstItem="JbO-FK-WcZ" firstAttribute="leading" secondItem="6Hb-Rd-oTB" secondAttribute="leading" id="NRi-AU-xyV"/>
+                            <constraint firstItem="quO-3U-Ka3" firstAttribute="trailing" secondItem="JbO-FK-WcZ" secondAttribute="trailing" id="UIW-bz-BGK"/>
+                            <constraint firstItem="JbO-FK-WcZ" firstAttribute="trailing" secondItem="6Hb-Rd-oTB" secondAttribute="trailing" id="zGM-ay-EnI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="75c-a6-AtU"/>
+                    <connections>
+                        <outlet property="belgiumMapView" destination="quO-3U-Ka3" id="xr1-zY-lyA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dc0-Ty-piO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610.144927536232" y="639.50892857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oca-3R-R24">
+            <objects>
+                <tabBarController id="tOw-D8-1mD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bE0-z5-gEr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e8Y-ad-iaA" kind="relationship" relationship="viewControllers" id="aMi-XL-6tD"/>
+                        <segue destination="8Cw-Rp-0Nt" kind="relationship" relationship="viewControllers" id="jEH-Pg-0Lo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pF8-XP-q7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="552"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

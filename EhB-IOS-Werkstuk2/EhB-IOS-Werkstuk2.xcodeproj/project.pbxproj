@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43BD7C7624177668AC4BDF96 /* Pods_EhB_IOS_Werkstuk2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4D8D46EE34113C9900E73 /* Pods_EhB_IOS_Werkstuk2.framework */; };
+		8E09538C265E9D4E005E1F59 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09538B265E9D4E005E1F59 /* HomeViewController.swift */; };
+		8E095397265EA201005E1F59 /* usa-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E095396265EA201005E1F59 /* usa-low.svg */; };
+		8E0953AE265EA572005E1F59 /* belgiumLow.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E0953AD265EA572005E1F59 /* belgiumLow.svg */; };
+		8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0953B0265FAF6F005E1F59 /* CovidData.swift */; };
 		8EF93862265E83A500B3BE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF93861265E83A500B3BE82 /* AppDelegate.swift */; };
 		8EF93864265E83A500B3BE82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF93863265E83A500B3BE82 /* SceneDelegate.swift */; };
 		8EF93866265E83A500B3BE82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF93865265E83A500B3BE82 /* ViewController.swift */; };
@@ -17,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017F1BB8B52F5CD71D6CC70D /* Pods-EhB-IOS-Werkstuk2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EhB-IOS-Werkstuk2.release.xcconfig"; path = "Target Support Files/Pods-EhB-IOS-Werkstuk2/Pods-EhB-IOS-Werkstuk2.release.xcconfig"; sourceTree = "<group>"; };
+		13F4D8D46EE34113C9900E73 /* Pods_EhB_IOS_Werkstuk2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EhB_IOS_Werkstuk2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB152CB7AB265F0E29B17F7 /* Pods-EhB-IOS-Werkstuk2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EhB-IOS-Werkstuk2.debug.xcconfig"; path = "Target Support Files/Pods-EhB-IOS-Werkstuk2/Pods-EhB-IOS-Werkstuk2.debug.xcconfig"; sourceTree = "<group>"; };
+		8E09538B265E9D4E005E1F59 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8E095396265EA201005E1F59 /* usa-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "usa-low.svg"; sourceTree = "<group>"; };
+		8E0953AD265EA572005E1F59 /* belgiumLow.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = belgiumLow.svg; sourceTree = "<group>"; };
+		8E0953B0265FAF6F005E1F59 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 		8EF9385E265E83A500B3BE82 /* EhB-IOS-Werkstuk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EhB-IOS-Werkstuk2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF93861265E83A500B3BE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EF93863265E83A500B3BE82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +45,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BD7C7624177668AC4BDF96 /* Pods_EhB_IOS_Werkstuk2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18B991C9F99A36107302F269 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F4D8D46EE34113C9900E73 /* Pods_EhB_IOS_Werkstuk2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63911FFC1D6DCBBCA6CD078F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CB152CB7AB265F0E29B17F7 /* Pods-EhB-IOS-Werkstuk2.debug.xcconfig */,
+				017F1BB8B52F5CD71D6CC70D /* Pods-EhB-IOS-Werkstuk2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E095391265EA1B4005E1F59 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E0953AD265EA572005E1F59 /* belgiumLow.svg */,
+				8E095396265EA201005E1F59 /* usa-low.svg */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		8EF93855265E83A500B3BE82 = {
 			isa = PBXGroup;
 			children = (
 				8EF93860265E83A500B3BE82 /* EhB-IOS-Werkstuk2 */,
 				8EF9385F265E83A500B3BE82 /* Products */,
+				63911FFC1D6DCBBCA6CD078F /* Pods */,
+				18B991C9F99A36107302F269 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +99,7 @@
 		8EF93860265E83A500B3BE82 /* EhB-IOS-Werkstuk2 */ = {
 			isa = PBXGroup;
 			children = (
+				8E095391265EA1B4005E1F59 /* Data */,
 				8EF93861265E83A500B3BE82 /* AppDelegate.swift */,
 				8EF93863265E83A500B3BE82 /* SceneDelegate.swift */,
 				8EF93865265E83A500B3BE82 /* ViewController.swift */,
@@ -66,6 +108,8 @@
 				8EF9386F265E83A700B3BE82 /* LaunchScreen.storyboard */,
 				8EF93872265E83A700B3BE82 /* Info.plist */,
 				8EF9386A265E83A500B3BE82 /* EhB_IOS_Werkstuk2.xcdatamodeld */,
+				8E09538B265E9D4E005E1F59 /* HomeViewController.swift */,
+				8E0953B0265FAF6F005E1F59 /* CovidData.swift */,
 			);
 			path = "EhB-IOS-Werkstuk2";
 			sourceTree = "<group>";
@@ -77,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EF93875265E83A700B3BE82 /* Build configuration list for PBXNativeTarget "EhB-IOS-Werkstuk2" */;
 			buildPhases = (
+				21F2246E4B981C15C444E93A /* [CP] Check Pods Manifest.lock */,
 				8EF9385A265E83A500B3BE82 /* Sources */,
 				8EF9385B265E83A500B3BE82 /* Frameworks */,
 				8EF9385C265E83A500B3BE82 /* Resources */,
+				CD7B50BB6B220C9D3CB31D20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E095397265EA201005E1F59 /* usa-low.svg in Resources */,
+				8E0953AE265EA572005E1F59 /* belgiumLow.svg in Resources */,
 				8EF93871265E83A700B3BE82 /* LaunchScreen.storyboard in Resources */,
 				8EF9386E265E83A700B3BE82 /* Assets.xcassets in Resources */,
 				8EF93869265E83A500B3BE82 /* Main.storyboard in Resources */,
@@ -135,13 +183,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21F2246E4B981C15C444E93A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EhB-IOS-Werkstuk2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD7B50BB6B220C9D3CB31D20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EhB-IOS-Werkstuk2/Pods-EhB-IOS-Werkstuk2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EhB-IOS-Werkstuk2/Pods-EhB-IOS-Werkstuk2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EhB-IOS-Werkstuk2/Pods-EhB-IOS-Werkstuk2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EF9385A265E83A500B3BE82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E09538C265E9D4E005E1F59 /* HomeViewController.swift in Sources */,
 				8EF9386C265E83A500B3BE82 /* EhB_IOS_Werkstuk2.xcdatamodeld in Sources */,
 				8EF93866265E83A500B3BE82 /* ViewController.swift in Sources */,
+				8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */,
 				8EF93862265E83A500B3BE82 /* AppDelegate.swift in Sources */,
 				8EF93864265E83A500B3BE82 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +379,7 @@
 		};
 		8EF93876265E83A700B3BE82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CB152CB7AB265F0E29B17F7 /* Pods-EhB-IOS-Werkstuk2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +399,7 @@
 		};
 		8EF93877265E83A700B3BE82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 017F1BB8B52F5CD71D6CC70D /* Pods-EhB-IOS-Werkstuk2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

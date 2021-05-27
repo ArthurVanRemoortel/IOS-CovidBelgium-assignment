@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - FSInteractiveMap (0.1.0)
+
+DEPENDENCIES:
+  - Charts
+  - FSInteractiveMap
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - FSInteractiveMap
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  FSInteractiveMap: 43a8d1388056b21da95194528fc37e222c7dad50
+
+PODFILE CHECKSUM: fa4ef18a5962c2d50c7d556a35e793ce80bf7982
+
+COCOAPODS: 1.10.1
