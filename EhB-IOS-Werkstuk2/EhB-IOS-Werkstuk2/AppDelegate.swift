@@ -10,12 +10,11 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    
-
+    var isFirstLauch = false
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.resetFirstLaunch() // TODO: Development only. Remove this.
-        self.startupCheck()
+        self.resetFirstLaunch() // TODO: Development only. Resets the database.
+        sleep(5) // TODO: Development only. Dirty fix to prevent possible concurrency issue???
+        isFirstLauch = self.startupCheck()
         return true
     }
 
@@ -54,23 +53,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func startupCheck(){
+    func startupCheck() -> Bool{
         // http://ios-tutorial.com/detect-application-run-first-time-ios/
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore {
             print("Not first launch.")
+            return false
         }
         else {
             print("First launch")
-            let context = self.persistentContainer.viewContext
             UserDefaults.standard.set(true, forKey: "launchedBefore")
+            return true
             
-            //TODO: Wrap this is single function?
-            CovidDataManager.sharedInstance.getVaccinations(context: context)
-            CovidDataManager.sharedInstance.getCases(context: context)
-            CovidDataManager.sharedInstance.getTests(context: context)
+            
         }
     }
+    
     
     func resetFirstLaunch() {
         // TODO: Development only. Remove this.
