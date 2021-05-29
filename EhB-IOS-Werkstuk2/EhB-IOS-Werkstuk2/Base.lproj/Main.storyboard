@@ -186,13 +186,6 @@
                                                         <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuA-aN-nAh">
-                                                        <rect key="frame" x="24" y="405" width="141" height="64"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Belgium"/>
-                                                    </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-1W-GuN">
                                                         <rect key="frame" x="23" y="94" width="368" height="32"/>
                                                         <color key="backgroundColor" red="0.78819173570000001" green="0.67846965790000002" blue="0.65482503179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,18 +211,18 @@
                                                         <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swz-dG-QsJ">
-                                                        <rect key="frame" x="236" y="405" width="147" height="64"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Brussels"/>
-                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint: Select a province for detailed information." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juo-I6-cwr">
+                                                        <rect key="frame" x="18" y="386" width="396" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.13331797719999999" green="0.13334643839999999" blue="0.23133951429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="IQ2-xH-pPu" firstAttribute="top" secondItem="urK-o5-cyL" secondAttribute="bottom" constant="-4" id="1g7-kZ-tOW"/>
                                                     <constraint firstAttribute="trailing" secondItem="ACv-oy-Xl8" secondAttribute="trailing" constant="31" id="2sc-z6-VBv"/>
+                                                    <constraint firstItem="juo-I6-cwr" firstAttribute="trailing" secondItem="SDf-w8-Sie" secondAttribute="trailing" id="6Rh-xx-3cQ"/>
                                                     <constraint firstItem="urK-o5-cyL" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="23" id="9Mh-qP-uO3"/>
                                                     <constraint firstItem="ACv-oy-Xl8" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="23" id="ETW-uJ-o2b"/>
                                                     <constraint firstItem="SDf-w8-Sie" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="8" id="G1k-NH-3XR"/>
@@ -238,11 +231,13 @@
                                                     <constraint firstItem="ACv-oy-Xl8" firstAttribute="top" secondItem="zzd-1W-GuN" secondAttribute="bottom" constant="14" id="HmK-Qc-eO2"/>
                                                     <constraint firstItem="zzd-1W-GuN" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="23" id="L6M-9L-H5K"/>
                                                     <constraint firstAttribute="trailing" secondItem="IQ2-xH-pPu" secondAttribute="trailing" constant="22" id="O0O-hq-qMD"/>
+                                                    <constraint firstItem="juo-I6-cwr" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="18" id="kKU-kP-vUT"/>
                                                     <constraint firstItem="urK-o5-cyL" firstAttribute="top" secondItem="hcy-v0-hjX" secondAttribute="top" constant="8" id="lTa-Eo-PBa"/>
                                                     <constraint firstAttribute="trailing" secondItem="SDf-w8-Sie" secondAttribute="trailing" id="nDN-ab-cAd"/>
                                                     <constraint firstItem="IQ2-xH-pPu" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="24" id="r8d-dy-Z07"/>
                                                     <constraint firstAttribute="trailing" secondItem="zzd-1W-GuN" secondAttribute="trailing" constant="23" id="sDf-mm-afN"/>
                                                     <constraint firstItem="SDf-w8-Sie" firstAttribute="top" secondItem="ACv-oy-Xl8" secondAttribute="bottom" constant="14" id="szk-wR-Wix"/>
+                                                    <constraint firstItem="juo-I6-cwr" firstAttribute="top" secondItem="SDf-w8-Sie" secondAttribute="bottom" constant="18" id="u7Q-Gd-UxB"/>
                                                     <constraint firstAttribute="height" constant="491" id="uDk-xD-iwX"/>
                                                 </constraints>
                                             </view>
@@ -285,6 +280,7 @@
                         <outlet property="belgiumMapView" destination="R83-gF-CD2" id="dns-2f-CTL"/>
                         <outlet property="chartLabel" destination="ACv-oy-Xl8" id="ywf-0v-U1q"/>
                         <outlet property="dataTypeSegmentControl" destination="zzd-1W-GuN" id="fBv-F7-B8f"/>
+                        <outlet property="hintLabel" destination="juo-I6-cwr" id="o3M-4b-1Ld"/>
                         <outlet property="selectionLineChart" destination="SDf-w8-Sie" id="wmM-py-Akn"/>
                     </connections>
                 </viewController>
@@ -317,9 +313,6 @@
         <image name="SciensanoLogo" width="362" height="139"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

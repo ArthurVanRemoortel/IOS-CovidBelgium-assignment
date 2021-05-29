@@ -12,6 +12,8 @@
 		8E095397265EA201005E1F59 /* usa-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E095396265EA201005E1F59 /* usa-low.svg */; };
 		8E0953AE265EA572005E1F59 /* belgiumLow.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E0953AD265EA572005E1F59 /* belgiumLow.svg */; };
 		8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0953B0265FAF6F005E1F59 /* CovidData.swift */; };
+		8EE9340326600243006C87C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9340226600243006C87C8 /* Utils.swift */; };
+		8EE9340626612CF2006C87C8 /* ImportDataPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */; };
 		8EF93862265E83A500B3BE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF93861265E83A500B3BE82 /* AppDelegate.swift */; };
 		8EF93864265E83A500B3BE82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF93863265E83A500B3BE82 /* SceneDelegate.swift */; };
 		8EF93866265E83A500B3BE82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF93865265E83A500B3BE82 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 		8E095396265EA201005E1F59 /* usa-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "usa-low.svg"; sourceTree = "<group>"; };
 		8E0953AD265EA572005E1F59 /* belgiumLow.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = belgiumLow.svg; sourceTree = "<group>"; };
 		8E0953B0265FAF6F005E1F59 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
+		8EE9340226600243006C87C8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDataPopupViewController.swift; sourceTree = "<group>"; };
 		8EF9385E265E83A500B3BE82 /* EhB-IOS-Werkstuk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EhB-IOS-Werkstuk2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF93861265E83A500B3BE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EF93863265E83A500B3BE82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				8EF9386A265E83A500B3BE82 /* EhB_IOS_Werkstuk2.xcdatamodeld */,
 				8E09538B265E9D4E005E1F59 /* HomeViewController.swift */,
 				8E0953B0265FAF6F005E1F59 /* CovidData.swift */,
+				8EE9340226600243006C87C8 /* Utils.swift */,
+				8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */,
 			);
 			path = "EhB-IOS-Werkstuk2";
 			sourceTree = "<group>";
@@ -233,8 +239,10 @@
 				8E09538C265E9D4E005E1F59 /* HomeViewController.swift in Sources */,
 				8EF9386C265E83A500B3BE82 /* EhB_IOS_Werkstuk2.xcdatamodeld in Sources */,
 				8EF93866265E83A500B3BE82 /* ViewController.swift in Sources */,
+				8EE9340326600243006C87C8 /* Utils.swift in Sources */,
 				8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */,
 				8EF93862265E83A500B3BE82 /* AppDelegate.swift in Sources */,
+				8EE9340626612CF2006C87C8 /* ImportDataPopupViewController.swift in Sources */,
 				8EF93864265E83A500B3BE82 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

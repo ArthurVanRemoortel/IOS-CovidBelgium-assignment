@@ -109,15 +109,10 @@ class CovidDataManager {
                     print("error trying to convert data to JSON")
                     return
                 }
-                completionHandler(parsedData)
-//                if (completionOnMainThread){
-//                    DispatchQueue.main.async {
-//                        completion(parsedData)
-//                    }
-//                } else {
-//                    completion(parsedData)
-//                }
-//                completion(parsedData)
+                DispatchQueue.main.async {
+                    // Prevents concurrency problem with CoreData but very shortly blocks UI.
+                    completionHandler(parsedData)
+                }
             } catch  {
                 print("error trying to convert data to JSON")
                 return
