@@ -9,10 +9,50 @@ import Foundation
 import CoreData
 
 
+class Adres{
+    var straat: String
+    var huisNr: String
+    var gemeente: String
+    var postcode: Int
+    
+    init(straat: String, huisNr: String, gemeente: String, postcode: Int) {
+        self.straat = straat
+        self.huisNr = huisNr
+        self.gemeente = gemeente
+        self.postcode = postcode
+    }
+}
+
+class CovidCentrum{
+    var naam: String
+    var fotoNaam: String
+    var adres: Adres
+    var telefoon: String
+    var coordinaat: (Double, Double)
+    
+    init(naam: String, fotoNaam: String, telefoon: String, coordinaat: (Double, Double), straat: String, huisNr: String, gemeente: String, postcode: Int) {
+        self.naam = naam
+        self.fotoNaam = fotoNaam
+        self.adres = Adres(straat: straat, huisNr: huisNr, gemeente: gemeente, postcode: postcode)
+        self.telefoon = telefoon
+        self.coordinaat = coordinaat
+    }
+}
+
+
 class CovidDataManager {
     let dateFormatter = DateFormatter()
     
     var apiUrls: [String : ([[String: AnyObject]], NSManagedObjectContext)->Void] = [:]
+    
+    static var covidCentra = [
+        CovidCentrum(naam: "Centrum Merode", fotoNaam: "Merode", telefoon: "1234", coordinaat: (50.839295600000064, 4.397724400000014), straat: "Tervurenlaan", huisNr: "0", gemeente: "Etterbeek", postcode: 1040),
+        CovidCentrum(naam: "Centrum Pacheco", fotoNaam: "Pacheco", telefoon: "1234", coordinaat: (50.8532305,4.3602625), straat: "Pachecolaan", huisNr: "42", gemeente: "Brussel", postcode: 1000),
+        CovidCentrum(naam: "Centrum Albert", fotoNaam: "covidCentrumDefault", telefoon: "1234", coordinaat: (50.82060097805079, 4.34014794972956), straat: "Jupiterlaan", huisNr: "201", gemeente: "Vorst", postcode: 1190),
+        CovidCentrum(naam: "Centrum Heizel", fotoNaam: "Heizel", telefoon: "1234", coordinaat: (50.901405299999986, 4.345512699999983), straat: "Madridlaan", huisNr: "178", gemeente: "Brussel", postcode: 1020),
+        CovidCentrum(naam: "Centrum Molenbeek", fotoNaam: "Molenbeek", telefoon: "1234", coordinaat: (50.85780859999999, 4.343513300000019), straat: "Nijverheidskaai", huisNr: "31", gemeente: "Sint-Jans-Molenbeek", postcode: 1080),
+        CovidCentrum(naam: "Centrum Schaarbeek", fotoNaam: "Schaarbeek", telefoon: "1234", coordinaat: (50.8662653, 4.38215660000001), straat: "Algemeen Stemrechtlaan", huisNr: "0", gemeente: "Schaarbeek", postcode: 1030),
+    ]
     
     static let shared: CovidDataManager = {
         let instance = CovidDataManager()
@@ -110,7 +150,7 @@ class CovidDataManager {
                     return
                 }
                 DispatchQueue.main.async {
-                    // Prevents concurrency problem with CoreData but very shortly blocks UI.
+                    // Prevents concurrency problem with CoreData but v	ery shortly blocks UI.
                     completionHandler(parsedData)
                 }
             } catch  {

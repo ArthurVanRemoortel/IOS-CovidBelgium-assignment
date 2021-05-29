@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Data View Controller-->
         <scene sceneID="eHb-ES-pKT">
             <objects>
-                <viewController id="8Cw-Rp-0Nt" sceneMemberID="viewController">
+                <viewController id="8Cw-Rp-0Nt" customClass="DataViewController" customModule="EhB_IOS_Werkstuk2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWA-Ji-6qY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="w4M-Wz-oDo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="rik-OZ-Oe1">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="oOG-gR-7HB">
@@ -24,13 +24,55 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update Data"/>
+                                <connections>
+                                    <action selector="updateData:" destination="8Cw-Rp-0Nt" eventType="touchUpInside" id="Dce-y8-MWH"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h76-ee-Hc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3357.971014492754" y="632.8125"/>
+            <point key="canvasLocation" x="3241" y="633"/>
+        </scene>
+        <!--Vaccines-->
+        <scene sceneID="KUh-dM-jfy">
+            <objects>
+                <viewController id="kbG-ws-7RN" customClass="VaccinesViewController" customModule="EhB_IOS_Werkstuk2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cyl-sT-gHe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTf-AL-Vwq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Algemene vragen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gul-WT-Why">
+                                        <rect key="frame" x="23" y="128" width="147" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                        <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vaccinations Belgium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBj-fC-UZc">
+                                        <rect key="frame" x="23" y="52" width="383" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13331797719999999" green="0.13334643839999999" blue="0.23133951429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C9d-TT-6Kd"/>
+                        <color key="backgroundColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Vaccines" image="heart" catalog="system" id="KpD-ai-tW2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsc-7T-hiL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4027.5362318840585" y="632.8125"/>
         </scene>
         <!--Root Tab Bar Controller-->
         <scene sceneID="oca-3R-R24">
@@ -44,11 +86,12 @@
                     <connections>
                         <segue destination="Be2-Rb-TXQ" kind="relationship" relationship="viewControllers" id="kGD-3i-O9z"/>
                         <segue destination="LTd-2T-oXE" kind="relationship" relationship="viewControllers" id="jEH-Pg-0Lo"/>
+                        <segue destination="kbG-ws-7RN" kind="relationship" relationship="viewControllers" id="CQz-8h-K5m"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pF8-XP-q7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="384"/>
+            <point key="canvasLocation" x="2448" y="-137"/>
         </scene>
         <!--Import Data Popup View Controller-->
         <scene sceneID="Jnr-nC-R9L">
@@ -149,7 +192,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chb-QT-wgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="thu-tx-elp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="221.73913043478262" y="1133.7053571428571"/>
+            <point key="canvasLocation" x="1586" y="-137"/>
         </scene>
         <!--Home-->
         <scene sceneID="oAb-dl-7j0">
@@ -287,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gf-mV-afj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1611.5942028985507" y="1128.3482142857142"/>
+            <point key="canvasLocation" x="1720" y="801"/>
         </scene>
         <!--Data-->
         <scene sceneID="gRw-ta-5KG">
@@ -312,6 +355,7 @@
     <resources>
         <image name="ContinueButton" width="430" height="92"/>
         <image name="SciensanoLogo" width="362" height="139"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

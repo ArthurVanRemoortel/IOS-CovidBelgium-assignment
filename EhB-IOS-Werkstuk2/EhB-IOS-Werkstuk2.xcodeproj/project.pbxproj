@@ -12,6 +12,8 @@
 		8E095397265EA201005E1F59 /* usa-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E095396265EA201005E1F59 /* usa-low.svg */; };
 		8E0953AE265EA572005E1F59 /* belgiumLow.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E0953AD265EA572005E1F59 /* belgiumLow.svg */; };
 		8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0953B0265FAF6F005E1F59 /* CovidData.swift */; };
+		8ECDA2AB2662790F0019B281 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA2AA2662790F0019B281 /* DataViewController.swift */; };
+		8ECDA2AF26627FF40019B281 /* VaccinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */; };
 		8EE9340326600243006C87C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9340226600243006C87C8 /* Utils.swift */; };
 		8EE9340626612CF2006C87C8 /* ImportDataPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */; };
 		8EF93862265E83A500B3BE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF93861265E83A500B3BE82 /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		8E095396265EA201005E1F59 /* usa-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "usa-low.svg"; sourceTree = "<group>"; };
 		8E0953AD265EA572005E1F59 /* belgiumLow.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = belgiumLow.svg; sourceTree = "<group>"; };
 		8E0953B0265FAF6F005E1F59 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
+		8ECDA2AA2662790F0019B281 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesViewController.swift; sourceTree = "<group>"; };
 		8EE9340226600243006C87C8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDataPopupViewController.swift; sourceTree = "<group>"; };
 		8EF9385E265E83A500B3BE82 /* EhB-IOS-Werkstuk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EhB-IOS-Werkstuk2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,15 +111,17 @@
 				8EF93861265E83A500B3BE82 /* AppDelegate.swift */,
 				8EF93863265E83A500B3BE82 /* SceneDelegate.swift */,
 				8EF93865265E83A500B3BE82 /* RootTabBarController.swift */,
+				8E09538B265E9D4E005E1F59 /* HomeViewController.swift */,
+				8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */,
+				8ECDA2AA2662790F0019B281 /* DataViewController.swift */,
+				8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */,
 				8EF93867265E83A500B3BE82 /* Main.storyboard */,
 				8EF9386D265E83A700B3BE82 /* Assets.xcassets */,
 				8EF9386F265E83A700B3BE82 /* LaunchScreen.storyboard */,
 				8EF93872265E83A700B3BE82 /* Info.plist */,
 				8EF9386A265E83A500B3BE82 /* EhB_IOS_Werkstuk2.xcdatamodeld */,
-				8E09538B265E9D4E005E1F59 /* HomeViewController.swift */,
 				8E0953B0265FAF6F005E1F59 /* CovidData.swift */,
 				8EE9340226600243006C87C8 /* Utils.swift */,
-				8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */,
 			);
 			path = "EhB-IOS-Werkstuk2";
 			sourceTree = "<group>";
@@ -237,6 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E09538C265E9D4E005E1F59 /* HomeViewController.swift in Sources */,
+				8ECDA2AB2662790F0019B281 /* DataViewController.swift in Sources */,
+				8ECDA2AF26627FF40019B281 /* VaccinesViewController.swift in Sources */,
 				8EF9386C265E83A500B3BE82 /* EhB_IOS_Werkstuk2.xcdatamodeld in Sources */,
 				8EF93866265E83A500B3BE82 /* RootTabBarController.swift in Sources */,
 				8EE9340326600243006C87C8 /* Utils.swift in Sources */,
