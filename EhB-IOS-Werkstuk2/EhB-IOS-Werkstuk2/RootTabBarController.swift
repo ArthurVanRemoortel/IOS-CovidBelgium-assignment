@@ -9,7 +9,7 @@ import UIKit
 import Charts
 import FSInteractiveMap
 
-class ViewController: UITabBarController {
+class RootTabBarController: UITabBarController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -20,6 +20,7 @@ class ViewController: UITabBarController {
         if (appDelegate.isFirstLauch || true){ // TODO: Dev Only
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ImportDataPopupViewController") as! ImportDataPopupViewController
+            newViewController.rootTabBarController = self
             self.present(newViewController, animated: true, completion: nil)
         }
     }

@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="3357.971014492754" y="632.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--Root Tab Bar Controller-->
         <scene sceneID="oca-3R-R24">
             <objects>
-                <tabBarController id="tOw-D8-1mD" customClass="ViewController" customModule="EhB_IOS_Werkstuk2" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="tOw-D8-1mD" customClass="RootTabBarController" customModule="EhB_IOS_Werkstuk2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bE0-z5-gEr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -99,17 +99,17 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4cI-d8-wN9">
-                                <rect key="frame" x="189" y="538" width="36" height="20"/>
+                                <rect key="frame" x="189" y="563" width="36" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="k5a-RF-qrp"/>
                                 </constraints>
                             </activityIndicatorView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVS-tv-CFv">
-                                <rect key="frame" x="107" y="603" width="201" height="52"/>
+                                <rect key="frame" x="107" y="547" width="201" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="4rB-nA-VRc"/>
                                 </constraints>
-                                <state key="normal" title="Continue" image="ContinueButton"/>
+                                <state key="normal" title="Continue" backgroundImage="ContinueButton"/>
                                 <connections>
                                     <action selector="dismissPopup" destination="WsT-Xq-SwC" eventType="touchUpInside" id="JXb-qP-0sJ"/>
                                 </connections>
@@ -123,12 +123,12 @@
                             <constraint firstItem="Wnd-eQ-dkN" firstAttribute="top" secondItem="6Wi-Wt-tRr" secondAttribute="bottom" constant="24.5" id="COB-OI-QM0"/>
                             <constraint firstItem="feX-n4-lDZ" firstAttribute="trailing" secondItem="6Wi-Wt-tRr" secondAttribute="trailing" constant="20" id="DIY-w2-v5B"/>
                             <constraint firstItem="ryJ-Z3-LHu" firstAttribute="width" secondItem="gbP-A0-7dp" secondAttribute="width" id="Ezv-5B-0ts"/>
-                            <constraint firstItem="cVS-tv-CFv" firstAttribute="top" secondItem="4cI-d8-wN9" secondAttribute="bottom" constant="45" id="GWD-vh-WYw"/>
+                            <constraint firstItem="cVS-tv-CFv" firstAttribute="top" secondItem="4cI-d8-wN9" secondAttribute="bottom" constant="-36" id="GWD-vh-WYw"/>
                             <constraint firstItem="gbP-A0-7dp" firstAttribute="top" secondItem="Wnd-eQ-dkN" secondAttribute="bottom" constant="9" id="H33-d8-ZbA"/>
                             <constraint firstItem="feX-n4-lDZ" firstAttribute="trailing" secondItem="gbP-A0-7dp" secondAttribute="trailing" constant="41" id="Js1-tf-MNm"/>
                             <constraint firstItem="ryJ-Z3-LHu" firstAttribute="leading" secondItem="gbP-A0-7dp" secondAttribute="leading" id="NVw-Bq-LPm"/>
                             <constraint firstItem="feX-n4-lDZ" firstAttribute="trailing" secondItem="4cI-d8-wN9" secondAttribute="trailing" constant="189" id="VKh-MC-Dra"/>
-                            <constraint firstItem="4cI-d8-wN9" firstAttribute="top" secondItem="ryJ-Z3-LHu" secondAttribute="bottom" constant="47" id="VzW-lj-nsP"/>
+                            <constraint firstItem="4cI-d8-wN9" firstAttribute="top" secondItem="ryJ-Z3-LHu" secondAttribute="bottom" constant="72" id="VzW-lj-nsP"/>
                             <constraint firstItem="Wnd-eQ-dkN" firstAttribute="leading" secondItem="feX-n4-lDZ" secondAttribute="leading" constant="20" id="YOP-T5-2kR"/>
                             <constraint firstItem="dm0-zw-h3N" firstAttribute="top" secondItem="feX-n4-lDZ" secondAttribute="top" constant="42" id="c4A-S8-iEK"/>
                             <constraint firstItem="cVS-tv-CFv" firstAttribute="leading" secondItem="ryJ-Z3-LHu" secondAttribute="leading" constant="66" id="dVU-TX-wdL"/>
@@ -141,6 +141,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activitySpinner" destination="4cI-d8-wN9" id="Pd6-gB-kkf"/>
                         <outlet property="continueButton" destination="cVS-tv-CFv" id="Z7t-nw-ZmX"/>
                         <outlet property="descriptionLabel" destination="6Wi-Wt-tRr" id="usZ-i7-axy"/>
                     </connections>
