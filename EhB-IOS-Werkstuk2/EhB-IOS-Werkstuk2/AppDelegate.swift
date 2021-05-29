@@ -12,8 +12,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var isFirstLauch = false
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.resetFirstLaunch() // TODO: Development only. Resets the database.
-        sleep(5) // TODO: Development only. Dirty fix to prevent possible concurrency issue???
+        //self.resetFirstLaunch() // TODO: Development only. Resets the database.
+        //sleep(5) // TODO: Development only. Dirty fix to prevent possible concurrency issue???
         isFirstLauch = self.startupCheck()
         return true
     }

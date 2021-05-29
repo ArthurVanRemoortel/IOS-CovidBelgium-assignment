@@ -17,7 +17,7 @@ class RootTabBarController: UITabBarController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if (appDelegate.isFirstLauch || true){ // TODO: Dev Only
+        if (appDelegate.isFirstLauch){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ImportDataPopupViewController") as! ImportDataPopupViewController
             newViewController.rootTabBarController = self

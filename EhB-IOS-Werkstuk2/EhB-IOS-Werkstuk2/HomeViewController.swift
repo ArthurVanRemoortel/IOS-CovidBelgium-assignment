@@ -24,9 +24,12 @@ class HomeViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         setupChart()
         initInteractiveMap()
-        // Do any additional setup after loading the view.
+        dataTypeChanged()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     private func setupChart(){
         selectionLineChart.dragEnabled = false
@@ -75,6 +78,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
                     totalCasesDay += Int(covidCase.cases)
                 }
                 chartLabel.text = "Selection: Cases in \(self.selectedMapRegion.0)"
+                self.hintLabel.text = ""
 
             } else if (index == 1){
                 // Vaccinations
@@ -97,6 +101,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
                     totalCasesDay += Int(covidVaccination.count)
                 }
                 chartLabel.text = "Selection: Vaccinations in \(self.selectedMapRegion.0)"
+                hintLabel.text = "(No province specific data)"
                 
             } else {
                 // Tests
@@ -122,6 +127,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
                     totalCasesDay += Int(covidTest.test_all)
                 }
                 chartLabel.text = "Selection: Tests in \(self.selectedMapRegion.0)"
+                self.hintLabel.text = ""
 
             }
             let dataSet = LineChartDataSet(entries: values, label: "DataSet 1")
@@ -156,17 +162,17 @@ class HomeViewController: UIViewController, ChartViewDelegate {
     
     func initInteractiveMap(){
         let data = [
-            "Antwerpen": 1,
-            "BrabantWallon": 2,
-            "Brussels": 3,
-            "Hainaut": 4,
-            "Liège": 5,
-            "Limburg": 6,
-            "Luxembourg": 7,
-            "Namur": 8,
-            "OostVlaanderen": 9,
-            "VlaamsBrabant": 10,
-            "WestVlaanderen": 11
+            "Antwerpen": colorNumberForProvince(province: "Antwerpen"),
+            "BrabantWallon": colorNumberForProvince(province: "BrabantWallon"),
+            "Brussels": colorNumberForProvince(province: "Brussels"),
+            "Hainaut": colorNumberForProvince(province: "Hainaut"),
+            "Liège": colorNumberForProvince(province: "Liège"),
+            "Limburg": colorNumberForProvince(province: "Limburg"),
+            "Luxembourg": colorNumberForProvince(province: "Luxembourg"),
+            "Namur": colorNumberForProvince(province: "Namur"),
+            "OostVlaanderen": colorNumberForProvince(province: "OostVlaanderen"),
+            "VlaamsBrabant": colorNumberForProvince(province: "VlaamsBrabant"),
+            "WestVlaanderen": colorNumberForProvince(province: "WestVlaanderen")
         ]
         let colorAxis: [UIColor] = [
             GreenColor.uiColor,
@@ -177,7 +183,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
         let map = FSInteractiveMapView(frame: CGRect(x: 16, y: 75, width: belgiumMapView.frame.width-64, height: belgiumMapView.frame.height))
         map.loadMap("belgiumLow", withData: data, colorAxis: colorAxis)
         map.clickHandler = {(identifier: String? , _ layer: CAShapeLayer?) -> Void in
-            self.hintLabel.isHidden = true
+            self.hintLabel.text = ""
             if (self.selectedMapRegion.1 != nil) {
                 // Drop current layer.
                 self.selectedMapRegion.1!.zPosition = 0;
@@ -199,6 +205,27 @@ class HomeViewController: UIViewController, ChartViewDelegate {
         }
         belgiumMapView.addSubview(map)
     }
+    
+    func colorNumberForProvince(province: String) -> Int{
+        // very simple implementation. Calculates cumulative cases for province. Does not consider total population of province. 
+        let calendar: Calendar = NSCalendar.current
+        let now = Date()
+        let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now)!
+        let startDate = calendar.startOfDay(for: sevenDaysAgo)
+        let fetchRequest: NSFetchRequest<Case> = Case.fetchRequest()
+        let provincePredicate = NSPredicate(format: "province = %@", province)
+        let datePredicate = NSPredicate(format:"date >= %@", startDate as CVarArg)
+        let andPredicate = NSCompoundPredicate(type: .and, subpredicates: [provincePredicate, datePredicate])
+        fetchRequest.predicate = andPredicate
+        do {
+            let dbfetchResult = try context.fetch(fetchRequest)
+            let cumulativeCases = Int(dbfetchResult.reduce(0, { $0 + $1.cases}))
+            return cumulativeCases
+        } catch {
+            return 1
+        }
+    }
+    
     
 
     /*

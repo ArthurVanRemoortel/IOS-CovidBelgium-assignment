@@ -38,11 +38,10 @@ class ImportDataPopupViewController: UIViewController {
                 self.activitySpinner.isHidden = true
                 self.continueButton.isHidden = false
                 if (self.rootTabBarController != nil){
-                    // TODO: Will break if order of tabs changes. 
+                    // TODO: Will break if order of tabs changes.
                     let homeVC = (self.rootTabBarController!.viewControllers?.first as! HomeViewController)
                     homeVC.dataTypeChanged()
                 }
-                
             }
         }
     }
