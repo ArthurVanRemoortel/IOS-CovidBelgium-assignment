@@ -13,12 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isFirstLauch = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.resetFirstLaunch() // TODO: Development only. Resets the database.
+        //self.resetFirstLaunch() // TODO: Development only. Resets the database.
         isFirstLauch = self.startupCheck()
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
@@ -26,8 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-
-    // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "EhB_IOS_Werkstuk2")
@@ -45,8 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
@@ -68,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func resetFirstLaunch() {
-        // TODO: Development only. Remove this.
+        // TODO: Development only. Resets database and other data.
         UserDefaults.standard.set(false, forKey: "launchedBefore")
         UserDefaults.standard.set(nil, forKey: "lastUpdateDate")
         CovidDataManager.shared.deleteDatabaseContents(context: persistentContainer.viewContext)
