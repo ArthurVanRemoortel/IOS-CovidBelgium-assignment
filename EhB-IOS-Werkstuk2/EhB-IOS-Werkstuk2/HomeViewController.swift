@@ -181,12 +181,15 @@ class HomeViewController: UIViewController, ChartViewDelegate {
             UIColor.red
         ]
         if (interactiveMapview != nil){
-            interactiveMapview!.loadMap("belgiumLow", withData: data, colorAxis: colorAxis)
+            interactiveMapview?.setData(data, colorAxis: colorAxis)
+        } else {
+            print("interactiveMapview == nil. This should not happen. ")
         }
     }
     
     func initInteractiveMap(){
         interactiveMapview = FSInteractiveMapView(frame: CGRect(x: 16, y: 75, width: belgiumMapView.frame.width-64, height: belgiumMapView.frame.height))
+        interactiveMapview!.loadMap("belgiumLow", withColors: [:])
         interactiveMapview!.clickHandler = {(identifier: String? , _ layer: CAShapeLayer?) -> Void in
             self.hintLabel.text = ""
             if (self.selectedMapRegion.1 != nil) {

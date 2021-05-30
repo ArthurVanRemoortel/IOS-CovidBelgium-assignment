@@ -1,0 +1,95 @@
+[
+{
+  "question": "Who should wear a face mask?",
+  "answer": "Everyone from the age of 13 (customers, staff, etc.) is obliged to wear a face mask or any other fabric alternative in shopping streets, shops and shopping centres, and any private or public place with significant footfall. If this is not possible for medical reasons, a face shield can be worn. The mayors are responsible for determining the shopping streets and the frequently visited private and public spaces in their municipality. These spaces will be clearly defined by a notice specifying the times during which the obligation applies.",
+  "links": [],
+  "category": "general"
+},
+{
+  "question": "Where and how can I tavel?",
+  "answer": "Nationally:\r\n    - You are allowed to move around freely.\"\r\n    - If you are using public transport (bus, tram or train) and are you older than 12 years of age, wear a face mask covering your mouth and nose.\r\n    - Between midnight and 5 a.m. you are allowed to be on the street with a maximum of 3 people.\r\n  Internationally:\r\n  - Travel is permitted, however, it is strongly discouraged.",
+  "links": ["https://www.info-coronavirus.be/en/travels/"],
+  "category": "general"
+},
+{
+  "question": "How do I work?",
+  "answer": " Work from home is mandatory.\r\n  If you have to go into work: Wear a mask, ventilate the space and consult the guide linked below. ",
+  "links": ["https://employment.belgium.be/en/themes/well-being-workers/safety-work-during-coronavirus-crisis-generic-guide"],
+  "category": "general"
+},
+{
+  "question": "Am I allowed to go shopping?",
+  "answer": " - You can shop with a maximum of one other person. This must be a person you live with.\r\n  - When you enter the store disinfect your hands first.\r\n  - You can shop for a maximum of 30 minutes.\r\n  - Wear a face mask. This is mandatory.\r\n  - Markets are being organized. Flea markets and bric-a-brac markets and year markets are allowed outside.\r\n  - Night shops are open until 10 pm.\r\n  - Hairdressers, barbers and other non-medical close-contact professions are open. For example: pedicures and beauticians.\r\n\r\n  Bars and restaurants:\r\n  - You can order takeaway for pick-up or delivery until 10 PM.\r\n  - The terraces of pubs and restaurants are open from 8:00 in the morning to 22:00 in the evening.\r\n  - You have to sit outside.\r\n  - You are allowed to sit at the table in groups of maximum 4 people or with the people you live with.\r\n  - You have to stay at the table. You do not have to wear a mouth mask. ",
+  "links": [],
+  "category": "general"
+},
+{
+  "question": "Can I go to the gym or practice sports?",
+  "answer": "- Jacuzzis, steam cabins and hamams, fitness centres, ski slopes, cross-country ski trails and ski centres are closed.\r\n  - Swimming pools are open.\r\n  - You can exercise outside with a maximum of 10 people. Keep a distance of 1.5 metres.\r\n  - A maximum of 25 people may attend sports events if it takes place outside. ",
+  "links": [],
+  "category": "general"
+},
+{
+  "question": "Are religious worship locations open?",
+  "answer": "- Worship services are allowed.\r\n  - A maximum of 15 people inside and 50 people.\r\n  - Children up until and including 12 years old and the minister of worship (for example a pastor or imam) do not need to be taken into account.\r\n  - Funerals may be held inside with maximum 50 people and maximum 1 person per 10 square meters. ",
+  "links": [],
+  "category": "general"
+},
+{
+  "question": "What are the consequences of non-compliance with the measures decided at the federal level?",
+  "answer": "Compliance with the announced measures is essential in order to avoid the further spread of the pandemic and additional reinforcement of the measures. We are counting on everyone’s sense of civic duty and responsibility. In the event of non-compliance with the measures (provided by the Ministerial Order), sanctions are possible under Article 187 of the law on Civil Security of 15 May 2007, among others. Local authorities remain competent for public order in accordance with article 135 §2 of the new municipal law, without prejudice to the measures or the spirit of the measures taken at a higher level. The police forces will carry out permanent checks to ensure strict compliance with the measures.",
+  "links": [],
+  "category": "general"
+},
+
+{
+  "question": "Why should I get vaccinated?",
+  "answer": "The vaccine stimulates your body to create antibodies. These substances help your body fight the virus. What if you come into contact with the virus afterwards? The antibodies will protect you.\r\nThe vaccine not only protects you but also the people around you. Coronavirus is dangerous for people older than 65 or persons that have certain conditions. If over 70% of the population in Belgium is vaccinated, the spread of the virus will be inhibited. This, in turn, will protect the people who cannot have the vaccination. This is known as herd immunity.\r\nVaccination against coronavirus is voluntary and free to all.\r\nYou must continue to comply with the coronavirus rules after vaccination, until sufficient people have been vaccinated. So, maintain a 1.5 metre distance, wear a face mask and wash your hands frequently.",
+  "links": [],
+  "category": "vaccine"
+},
+{
+  "question": "Is the vaccine safe?",
+  "answer": "There was already a great deal of expertise about the creation of vaccines. Scientists, pharmaceutical specialists, businesses and governments across the world worked together on the coronavirus vaccine. A great deal of time and money has been freed up in order to tackle this urgent problem. As a result, the vaccines have been developed very quickly.\r\nAll vaccines, however, are checked extremely carefully by the government. ",
+  "links": ["https://www.famhp.be/en/human_use/medicines/medicines/covid_19"],
+  "category": "vaccine"
+},
+{
+  "question": "When will I get my vaccine?",
+  "answer": "  January: Residents and personnel in residential care centres + healthcare staff (doctors, nurses, etc.) in hospitals.\r\n  February: Personnel from first line care (GPs, pharmacists, etc.) + collective care institutions (disability care, etc.) and other hospital staff.\r\n  March: Everyone aged 65 and above.\r\n  April: People with a higher risk due to specific healthcare issues (see further).\r\n  June: Everyone over the age of 18",
+  "links": [],
+  "category": "vaccine"
+},
+{
+  "question": "How does the vaccine process work?",
+  "answer": "- You will receive an invitation by post, text message and\/or email.\r\n  - You must register online or by phone.\r\n  - Is the time of your appointment not suitable? Then you can choose another time.\r\n  During your appointment:\r\n  - You will be given an injection in your upper arm.\r\n  - A few weeks after the first injection, you will be given your second injection. At the moment, each vaccine requires two doses, except for the vaccine from Johnson & Johnson.\r\n  - After vaccination, it takes between 10 and 14 days before your body begins to make antibodies. Only then do you have the best possible protection against the virus. ",
+  "links": [],
+  "category": "vaccine"
+},
+{
+  "question": "Is the vaccination against COVID-19 mandatory?",
+  "answer": "No. As with most vaccines in our country, vaccination against COVID-19 is voluntary. The vaccination will be offered free of charge in Belgium. ",
+  "links": [],
+  "category": "vaccine"
+},
+{
+  "question": "How many doses of the vaccine must I have?",
+  "answer": "Most of the vaccines that have been approved (Pfizer and Moderna), or which are currently going through the approval process of the European Medicines Agency (Astra Zeneca/Oxford and CureVac) are provided via 2 doses, which are given within a few weeks of one another (3 weeks for the Pfizer vaccine and 4 weeks for the others).",
+  "links": [],
+  "category": "vaccine"
+},
+{
+  "question": "Do I need a vaccine if I've already had COVID-19?",
+  "answer": "At the moment, there is no certainty as to whether someone who has already had COVID-19 has immunity against the disease, and\/or for how long. There have been reports of re-infections. Also, it not feasible to check whether people have antibodies in their blood against COVID-19, to establish whether or not they need a vaccine.\r\n  Vaccination is not mandatory but it means you are protecting yourself and others. Vaccines train the immune system in healthy people, in case they become (re) infected with the actual virus.",
+  "links": [],
+  "category": "vaccine"
+},
+{
+  "question": "Do I need to be tested before I am given the vaccine?",
+  "answer": "No, you do not have to be tested for antibodies before vaccination. Even if you are infected without realising, the vaccine can be administered safely.",
+  "links": [],
+  "category": "vaccine"
+},
+
+
+]

@@ -23,6 +23,4 @@ class DataViewController: UIViewController {
         importViewController.titleLabel.text = "Updating"
         importViewController.descriptionLabel.text = "You chose to update the database. This will download an updated dataset and will not take long."
     }
-
-    
 }

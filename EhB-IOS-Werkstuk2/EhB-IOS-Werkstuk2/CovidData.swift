@@ -39,13 +39,33 @@ class CovidCentrum{
     }
 }
 
+enum FAQCategory: String {
+    case general = "general"
+    case vaccine = "vaccine"
+}
+
+class CovidFAQ{
+    let question: String
+    let answer: String
+    let category: FAQCategory
+    let links: [URL]
+    
+    init(question: String, answer: String, linkStrings: [String], category: FAQCategory){
+        self.question = question
+        self.answer = answer
+        self.links = linkStrings.compactMap { URL(string: $0) }
+        self.category = category
+    }
+}
+
 
 class CovidDataManager {
     let dateFormatter = DateFormatter()
     
     var apiUrls: [String : ([[String: AnyObject]], NSManagedObjectContext)->Void] = [:]
     
-    static var covidCentra = [
+    // Reused from Opdracht 1.
+    static let covidCentra = [
         CovidCentrum(naam: "Centrum Merode", fotoNaam: "Merode", telefoon: "1234", coordinaat: (50.839295600000064, 4.397724400000014), straat: "Tervurenlaan", huisNr: "0", gemeente: "Etterbeek", postcode: 1040),
         CovidCentrum(naam: "Centrum Pacheco", fotoNaam: "Pacheco", telefoon: "1234", coordinaat: (50.8532305,4.3602625), straat: "Pachecolaan", huisNr: "42", gemeente: "Brussel", postcode: 1000),
         CovidCentrum(naam: "Centrum Albert", fotoNaam: "covidCentrumDefault", telefoon: "1234", coordinaat: (50.82060097805079, 4.34014794972956), straat: "Jupiterlaan", huisNr: "201", gemeente: "Vorst", postcode: 1190),
@@ -54,7 +74,10 @@ class CovidDataManager {
         CovidCentrum(naam: "Centrum Schaarbeek", fotoNaam: "Schaarbeek", telefoon: "1234", coordinaat: (50.8662653, 4.38215660000001), straat: "Algemeen Stemrechtlaan", huisNr: "0", gemeente: "Schaarbeek", postcode: 1030),
     ]
     
+    static var covidFAQs: [CovidFAQ] = []
+    
     static let shared: CovidDataManager = {
+        // Creates a singleton object from which API calls are made and data is stored.
         let instance = CovidDataManager()
         instance.dateFormatter.dateFormat = "yyyy-MM-dd"
         instance.apiUrls = [
@@ -62,12 +85,35 @@ class CovidDataManager {
             "https://epistat.sciensano.be/Data/COVID19BE_tests.json" : instance.saveTestsToCoreData,
             "https://epistat.sciensano.be/Data/COVID19BE_VACC.json" : instance.saveVaccinationsToCoreData,
         ]
+        covidFAQs = instance.loadFAQsFromJson()
         return instance
     }()
     
+    func loadFAQsFromJson() -> [CovidFAQ]{
+        // From https://stackoverflow.com/a/24411014
+        var faqs: [CovidFAQ] = []
+        if let path = Bundle.main.path(forResource: "covidFAQ", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? [Dictionary<String, Any>] {
+                    for faqDict in jsonResult {
+                        let category = FAQCategory.init(rawValue: faqDict["category"]! as! String)!
+                        let faq = CovidFAQ(question: faqDict["question"]! as! String,
+                                           answer: faqDict["answer"]! as! String,
+                                           linkStrings: faqDict["links"]! as! [String],
+                                           category: category)
+                        faqs.append(faq)
+                    }
+                }
+              } catch {
+                   print(error)
+              }
+        }
+        return faqs
+    }
+    
     func getAllData(context: NSManagedObjectContext, mainCompletionHandler: @escaping () -> Void){
-        // TODO: Sometimes concurrency problem??? https://stackoverflow.com/questions/25812268/core-data-error-exception-was-caught-during-core-data-change-processing
-        // Only when trying to insert data while reset is still active.
         for (urlString, saveFunction) in apiUrls{
             makeGetCall(url: URL(string: urlString)!, completionHandler: {data in
                 saveFunction(data, context)

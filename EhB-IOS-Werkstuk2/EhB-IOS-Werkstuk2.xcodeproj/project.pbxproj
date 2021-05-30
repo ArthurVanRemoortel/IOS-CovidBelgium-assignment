@@ -12,6 +12,7 @@
 		8E0953AE265EA572005E1F59 /* belgiumLow.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E0953AD265EA572005E1F59 /* belgiumLow.svg */; };
 		8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0953B0265FAF6F005E1F59 /* CovidData.swift */; };
 		8E09762C2662B5DF008ACE8A /* CentrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09762B2662B5DF008ACE8A /* CentrumViewController.swift */; };
+		8E46AD8B2663AF6C0031557C /* covidFAQ.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E46AD8A2663AF6C0031557C /* covidFAQ.json */; };
 		8ECDA2AB2662790F0019B281 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA2AA2662790F0019B281 /* DataViewController.swift */; };
 		8ECDA2AF26627FF40019B281 /* VaccinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */; };
 		8EE9340326600243006C87C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9340226600243006C87C8 /* Utils.swift */; };
@@ -33,6 +34,7 @@
 		8E0953AD265EA572005E1F59 /* belgiumLow.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = belgiumLow.svg; sourceTree = "<group>"; };
 		8E0953B0265FAF6F005E1F59 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 		8E09762B2662B5DF008ACE8A /* CentrumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentrumViewController.swift; sourceTree = "<group>"; };
+		8E46AD8A2663AF6C0031557C /* covidFAQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = covidFAQ.json; sourceTree = "<group>"; };
 		8ECDA2AA2662790F0019B281 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesViewController.swift; sourceTree = "<group>"; };
 		8EE9340226600243006C87C8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		8E095391265EA1B4005E1F59 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8E46AD8A2663AF6C0031557C /* covidFAQ.json */,
 				8E0953AD265EA572005E1F59 /* belgiumLow.svg */,
 			);
 			path = Data;
@@ -189,6 +192,7 @@
 				8EF93871265E83A700B3BE82 /* LaunchScreen.storyboard in Resources */,
 				8EF9386E265E83A700B3BE82 /* Assets.xcassets in Resources */,
 				8EF93869265E83A500B3BE82 /* Main.storyboard in Resources */,
+				8E46AD8B2663AF6C0031557C /* covidFAQ.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
