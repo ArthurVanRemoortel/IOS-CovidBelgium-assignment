@@ -7,7 +7,7 @@
 },
 {
   "question": "Where and how can I tavel?",
-  "answer": "Nationally:\r\n    - You are allowed to move around freely.\"\r\n    - If you are using public transport (bus, tram or train) and are you older than 12 years of age, wear a face mask covering your mouth and nose.\r\n    - Between midnight and 5 a.m. you are allowed to be on the street with a maximum of 3 people.\r\n  Internationally:\r\n  - Travel is permitted, however, it is strongly discouraged.",
+  "answer": "Nationally:\r\n- You are allowed to move around freely.\"\r\n- If you are using public transport (bus, tram or train) and are you older than 12 years of age, wear a face mask covering your mouth and nose.\r\n- Between midnight and 5 a.m. you are allowed to be on the street with a maximum of 3 people.\r\n  Internationally:\r\n- Travel is permitted, however, it is strongly discouraged.",
   "links": ["https://www.info-coronavirus.be/en/travels/"],
   "category": "general"
 },
@@ -19,19 +19,19 @@
 },
 {
   "question": "Am I allowed to go shopping?",
-  "answer": " - You can shop with a maximum of one other person. This must be a person you live with.\r\n  - When you enter the store disinfect your hands first.\r\n  - You can shop for a maximum of 30 minutes.\r\n  - Wear a face mask. This is mandatory.\r\n  - Markets are being organized. Flea markets and bric-a-brac markets and year markets are allowed outside.\r\n  - Night shops are open until 10 pm.\r\n  - Hairdressers, barbers and other non-medical close-contact professions are open. For example: pedicures and beauticians.\r\n\r\n  Bars and restaurants:\r\n  - You can order takeaway for pick-up or delivery until 10 PM.\r\n  - The terraces of pubs and restaurants are open from 8:00 in the morning to 22:00 in the evening.\r\n  - You have to sit outside.\r\n  - You are allowed to sit at the table in groups of maximum 4 people or with the people you live with.\r\n  - You have to stay at the table. You do not have to wear a mouth mask. ",
+  "answer": " - You can shop with a maximum of one other person. This must be a person you live with.\r\n- When you enter the store disinfect your hands first.\r\n- You can shop for a maximum of 30 minutes.\r\n- Wear a face mask. This is mandatory.\r\n- Markets are being organized. Flea markets and bric-a-brac markets and year markets are allowed outside.\r\n- Night shops are open until 10 pm.\r\n- Hairdressers, barbers and other non-medical close-contact professions are open. For example: pedicures and beauticians.\r\n\r\n  Bars and restaurants:\r\n- You can order takeaway for pick-up or delivery until 10 PM.\r\n- The terraces of pubs and restaurants are open from 8:00 in the morning to 22:00 in the evening.\r\n- You have to sit outside.\r\n- You are allowed to sit at the table in groups of maximum 4 people or with the people you live with.\r\n- You have to stay at the table. You do not have to wear a mouth mask. ",
   "links": [],
   "category": "general"
 },
 {
   "question": "Can I go to the gym or practice sports?",
-  "answer": "- Jacuzzis, steam cabins and hamams, fitness centres, ski slopes, cross-country ski trails and ski centres are closed.\r\n  - Swimming pools are open.\r\n  - You can exercise outside with a maximum of 10 people. Keep a distance of 1.5 metres.\r\n  - A maximum of 25 people may attend sports events if it takes place outside. ",
+  "answer": "- Jacuzzis, steam cabins and hamams, fitness centres, ski slopes, cross-country ski trails and ski centres are closed.\r\n- Swimming pools are open.\r\n- You can exercise outside with a maximum of 10 people. Keep a distance of 1.5 metres.\r\n- A maximum of 25 people may attend sports events if it takes place outside. ",
   "links": [],
   "category": "general"
 },
 {
   "question": "Are religious worship locations open?",
-  "answer": "- Worship services are allowed.\r\n  - A maximum of 15 people inside and 50 people.\r\n  - Children up until and including 12 years old and the minister of worship (for example a pastor or imam) do not need to be taken into account.\r\n  - Funerals may be held inside with maximum 50 people and maximum 1 person per 10 square meters. ",
+  "answer": "- Worship services are allowed.\r\n- A maximum of 15 people inside and 50 people.\r\n- Children up until and including 12 years old and the minister of worship (for example a pastor or imam) do not need to be taken into account.\r\n- Funerals may be held inside with maximum 50 people and maximum 1 person per 10 square meters. ",
   "links": [],
   "category": "general"
 },
@@ -62,7 +62,7 @@
 },
 {
   "question": "How does the vaccine process work?",
-  "answer": "- You will receive an invitation by post, text message and\/or email.\r\n  - You must register online or by phone.\r\n  - Is the time of your appointment not suitable? Then you can choose another time.\r\n  During your appointment:\r\n  - You will be given an injection in your upper arm.\r\n  - A few weeks after the first injection, you will be given your second injection. At the moment, each vaccine requires two doses, except for the vaccine from Johnson & Johnson.\r\n  - After vaccination, it takes between 10 and 14 days before your body begins to make antibodies. Only then do you have the best possible protection against the virus. ",
+  "answer": "- You will receive an invitation by post, text message and\/or email.\r\n- You must register online or by phone.\r\n- Is the time of your appointment not suitable? Then you can choose another time.\r\n  During your appointment:\r\n- You will be given an injection in your upper arm.\r\n- A few weeks after the first injection, you will be given your second injection. At the moment, each vaccine requires two doses, except for the vaccine from Johnson & Johnson.\r\n- After vaccination, it takes between 10 and 14 days before your body begins to make antibodies. Only then do you have the best possible protection against the virus. ",
   "links": [],
   "category": "vaccine"
 },

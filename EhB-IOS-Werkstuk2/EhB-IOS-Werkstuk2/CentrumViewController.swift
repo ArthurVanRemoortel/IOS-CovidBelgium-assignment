@@ -39,8 +39,12 @@ class CentrumViewController: UIViewController, MKMapViewDelegate {
         annotation.coordinate = CLLocationCoordinate2D(latitude: self.covidCentrum!.coordinaat.0, longitude: self.covidCentrum!.coordinaat.1)
         myMapView.addAnnotation(annotation)
         centerMapOn(location: annotation.coordinate)
+        
+        overrideUserInterfaceStyle = .dark
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func centerMapOn(location: CLLocationCoordinate2D){
         let region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         self.myMapView.setRegion(region, animated: true)

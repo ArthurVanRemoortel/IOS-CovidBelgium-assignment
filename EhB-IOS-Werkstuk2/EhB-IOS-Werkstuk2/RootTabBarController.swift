@@ -16,6 +16,7 @@ class RootTabBarController: UITabBarController {
         super.viewDidLoad()
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         if (appDelegate.isFirstLauch){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

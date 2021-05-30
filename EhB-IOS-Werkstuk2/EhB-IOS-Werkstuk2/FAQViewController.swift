@@ -31,6 +31,10 @@ class FAQViewController: UIViewController {
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @objc func openLink(){
         print("Hello???")
         UIApplication.shared.open(covidFAQ!.links.first!)

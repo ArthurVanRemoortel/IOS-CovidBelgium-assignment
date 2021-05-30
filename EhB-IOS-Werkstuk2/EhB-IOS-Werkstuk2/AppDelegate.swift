@@ -11,6 +11,7 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var isFirstLauch = false
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // self.resetFirstLaunch() // TODO: Development only. Resets the database.
         isFirstLauch = self.startupCheck()

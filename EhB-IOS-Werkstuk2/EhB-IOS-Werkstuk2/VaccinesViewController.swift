@@ -34,6 +34,9 @@ class VaccinesViewController: UIViewController, UITableViewDelegate, UITableView
         wallonieLogo.isUserInteractionEnabled = true
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return CovidDataManager.covidCentra.count
