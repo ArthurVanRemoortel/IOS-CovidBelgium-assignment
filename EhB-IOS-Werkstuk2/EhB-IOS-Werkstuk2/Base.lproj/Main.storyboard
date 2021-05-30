@@ -231,7 +231,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="Be2-Rb-TXQ" kind="relationship" relationship="viewControllers" id="kGD-3i-O9z"/>
-                        <segue destination="LTd-2T-oXE" kind="relationship" relationship="viewControllers" id="jEH-Pg-0Lo"/>
                         <segue destination="kbG-ws-7RN" kind="relationship" relationship="viewControllers" id="CQz-8h-K5m"/>
                     </connections>
                 </tabBarController>
@@ -397,7 +396,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection: Cases in Belgium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-oy-Xl8">
-                                                        <rect key="frame" x="23" y="139" width="360" height="18"/>
+                                                        <rect key="frame" x="23" y="139" width="187" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                         <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -408,20 +407,40 @@
                                                         <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last update: 30 mei 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-n6-GbO">
+                                                        <rect key="frame" x="18" y="435" width="193" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La2-vG-UmV">
+                                                        <rect key="frame" x="235" y="430" width="94" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="94" id="Gn6-xw-S6o"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Update Now"/>
+                                                        <connections>
+                                                            <action selector="updateData" destination="Be2-Rb-TXQ" eventType="touchUpInside" id="tLb-pZ-dxD"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.13331797719999999" green="0.13334643839999999" blue="0.23133951429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="IQ2-xH-pPu" firstAttribute="top" secondItem="urK-o5-cyL" secondAttribute="bottom" constant="-4" id="1g7-kZ-tOW"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ACv-oy-Xl8" secondAttribute="trailing" constant="31" id="2sc-z6-VBv"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ACv-oy-Xl8" secondAttribute="trailing" symbolic="YES" id="2sc-z6-VBv"/>
+                                                    <constraint firstItem="LTg-n6-GbO" firstAttribute="top" secondItem="juo-I6-cwr" secondAttribute="bottom" constant="31" id="3io-ae-Igh"/>
+                                                    <constraint firstItem="La2-vG-UmV" firstAttribute="leading" secondItem="LTg-n6-GbO" secondAttribute="trailing" constant="24" id="6Er-FR-fLS"/>
                                                     <constraint firstItem="juo-I6-cwr" firstAttribute="trailing" secondItem="SDf-w8-Sie" secondAttribute="trailing" id="6Rh-xx-3cQ"/>
                                                     <constraint firstItem="urK-o5-cyL" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="23" id="9Mh-qP-uO3"/>
                                                     <constraint firstItem="ACv-oy-Xl8" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="23" id="ETW-uJ-o2b"/>
+                                                    <constraint firstItem="La2-vG-UmV" firstAttribute="centerY" secondItem="LTg-n6-GbO" secondAttribute="centerY" id="FFu-lJ-0C7"/>
                                                     <constraint firstItem="SDf-w8-Sie" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="8" id="G1k-NH-3XR"/>
                                                     <constraint firstItem="zzd-1W-GuN" firstAttribute="top" secondItem="IQ2-xH-pPu" secondAttribute="bottom" constant="19" id="G4D-hQ-YTf"/>
                                                     <constraint firstAttribute="trailing" secondItem="urK-o5-cyL" secondAttribute="trailing" constant="23" id="GI1-Mv-azt"/>
                                                     <constraint firstItem="ACv-oy-Xl8" firstAttribute="top" secondItem="zzd-1W-GuN" secondAttribute="bottom" constant="14" id="HmK-Qc-eO2"/>
                                                     <constraint firstItem="zzd-1W-GuN" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="23" id="L6M-9L-H5K"/>
                                                     <constraint firstAttribute="trailing" secondItem="IQ2-xH-pPu" secondAttribute="trailing" constant="22" id="O0O-hq-qMD"/>
+                                                    <constraint firstItem="LTg-n6-GbO" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="18" id="RFY-IN-HTL"/>
                                                     <constraint firstItem="juo-I6-cwr" firstAttribute="leading" secondItem="hcy-v0-hjX" secondAttribute="leading" constant="18" id="kKU-kP-vUT"/>
                                                     <constraint firstItem="urK-o5-cyL" firstAttribute="top" secondItem="hcy-v0-hjX" secondAttribute="top" constant="8" id="lTa-Eo-PBa"/>
                                                     <constraint firstAttribute="trailing" secondItem="SDf-w8-Sie" secondAttribute="trailing" id="nDN-ab-cAd"/>
@@ -477,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gf-mV-afj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720" y="801"/>
+            <point key="canvasLocation" x="1718.840579710145" y="800.89285714285711"/>
         </scene>
         <!--Data-->
         <scene sceneID="gRw-ta-5KG">

@@ -21,6 +21,11 @@ class RootTabBarController: UITabBarController {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let importViewController = storyBoard.instantiateViewController(withIdentifier: "ImportDataPopupViewController") as! ImportDataPopupViewController
             self.present(importViewController, animated: true, completion: nil)
+        } else {
+
+            let homeVC = (self.viewControllers?.first as! HomeViewController)
+            homeVC.updateInteractiveMapData()
+            homeVC.dataTypeChanged()
         }
     }
 }
