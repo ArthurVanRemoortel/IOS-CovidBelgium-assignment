@@ -130,6 +130,18 @@ class CovidDataManager {
         }
     }
     
+    func deleteDatabaseContents(context: NSManagedObjectContext){
+        do {
+            for toDelEntity in ["Vaccination", "Case", "Test"] {
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: toDelEntity)
+                try context.execute(NSBatchDeleteRequest(fetchRequest: fetchRequest))
+                print("Deleted all \(toDelEntity)")
+            }
+        } catch {
+            print("Could to clear database.")
+        }
+    }
+    
     func makeGetCall(url: URL, completionHandler: @escaping ([[String: AnyObject]])->(), completionOnMainThread: Bool = true){
         let urlRequest = URLRequest(url: url)
         let session = URLSession(configuration: URLSessionConfiguration.default)

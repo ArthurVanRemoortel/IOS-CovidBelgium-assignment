@@ -19,6 +19,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
     @IBOutlet var selectionLineChart: LineChartView!
     @IBOutlet var hintLabel: UILabel!
     var selectedMapRegion: (String, CAShapeLayer?) = ("Belgium", nil)
+    var interactiveMapview: FSInteractiveMapView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +101,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
                     // Same day. Accumulate number of cases.
                     totalCasesDay += Int(covidVaccination.count)
                 }
-                chartLabel.text = "Selection: Vaccinations in \(self.selectedMapRegion.0)"
+                chartLabel.text = "Selection: Vaccinations in Belgium"
                 hintLabel.text = "(No province specific data)"
                 
             } else {
@@ -160,7 +161,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
         dataSet.cubicIntensity = 0.1
     }
     
-    func initInteractiveMap(){
+    func updateInteractiveMapData(){
         let data = [
             "Antwerpen": colorNumberForProvince(province: "Antwerpen"),
             "BrabantWallon": colorNumberForProvince(province: "BrabantWallon"),
@@ -179,10 +180,14 @@ class HomeViewController: UIViewController, ChartViewDelegate {
             UIColor.orange,
             UIColor.red
         ]
-
-        let map = FSInteractiveMapView(frame: CGRect(x: 16, y: 75, width: belgiumMapView.frame.width-64, height: belgiumMapView.frame.height))
-        map.loadMap("belgiumLow", withData: data, colorAxis: colorAxis)
-        map.clickHandler = {(identifier: String? , _ layer: CAShapeLayer?) -> Void in
+        if (interactiveMapview != nil){
+            interactiveMapview!.loadMap("belgiumLow", withData: data, colorAxis: colorAxis)
+        }
+    }
+    
+    func initInteractiveMap(){
+        interactiveMapview = FSInteractiveMapView(frame: CGRect(x: 16, y: 75, width: belgiumMapView.frame.width-64, height: belgiumMapView.frame.height))
+        interactiveMapview!.clickHandler = {(identifier: String? , _ layer: CAShapeLayer?) -> Void in
             self.hintLabel.text = ""
             if (self.selectedMapRegion.1 != nil) {
                 // Drop current layer.
@@ -203,7 +208,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
             }
             self.dataTypeChanged()
         }
-        belgiumMapView.addSubview(map)
+        belgiumMapView.addSubview(interactiveMapview!)
     }
     
     func colorNumberForProvince(province: String) -> Int{
@@ -222,7 +227,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
             let cumulativeCases = Int(dbfetchResult.reduce(0, { $0 + $1.cases}))
             return cumulativeCases
         } catch {
-            return 1
+            return 0
         }
     }
 }

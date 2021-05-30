@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		43BD7C7624177668AC4BDF96 /* Pods_EhB_IOS_Werkstuk2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F4D8D46EE34113C9900E73 /* Pods_EhB_IOS_Werkstuk2.framework */; };
 		8E09538C265E9D4E005E1F59 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09538B265E9D4E005E1F59 /* HomeViewController.swift */; };
-		8E095397265EA201005E1F59 /* usa-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E095396265EA201005E1F59 /* usa-low.svg */; };
 		8E0953AE265EA572005E1F59 /* belgiumLow.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8E0953AD265EA572005E1F59 /* belgiumLow.svg */; };
 		8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0953B0265FAF6F005E1F59 /* CovidData.swift */; };
 		8E09762C2662B5DF008ACE8A /* CentrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09762B2662B5DF008ACE8A /* CentrumViewController.swift */; };
@@ -31,7 +30,6 @@
 		13F4D8D46EE34113C9900E73 /* Pods_EhB_IOS_Werkstuk2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EhB_IOS_Werkstuk2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB152CB7AB265F0E29B17F7 /* Pods-EhB-IOS-Werkstuk2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EhB-IOS-Werkstuk2.debug.xcconfig"; path = "Target Support Files/Pods-EhB-IOS-Werkstuk2/Pods-EhB-IOS-Werkstuk2.debug.xcconfig"; sourceTree = "<group>"; };
 		8E09538B265E9D4E005E1F59 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		8E095396265EA201005E1F59 /* usa-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "usa-low.svg"; sourceTree = "<group>"; };
 		8E0953AD265EA572005E1F59 /* belgiumLow.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = belgiumLow.svg; sourceTree = "<group>"; };
 		8E0953B0265FAF6F005E1F59 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 		8E09762B2662B5DF008ACE8A /* CentrumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentrumViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				8E0953AD265EA572005E1F59 /* belgiumLow.svg */,
-				8E095396265EA201005E1F59 /* usa-low.svg */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -188,7 +185,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E095397265EA201005E1F59 /* usa-low.svg in Resources */,
 				8E0953AE265EA572005E1F59 /* belgiumLow.svg in Resources */,
 				8EF93871265E83A700B3BE82 /* LaunchScreen.storyboard in Resources */,
 				8EF9386E265E83A700B3BE82 /* Assets.xcassets in Resources */,

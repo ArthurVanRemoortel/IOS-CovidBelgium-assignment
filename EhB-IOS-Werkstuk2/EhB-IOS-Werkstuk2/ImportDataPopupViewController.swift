@@ -12,12 +12,12 @@ class ImportDataPopupViewController: UIViewController {
 
     @IBOutlet var continueButton: UIButton!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var activitySpinner: UIActivityIndicatorView!
     
     var completedDownloads: Int = 0
     
     let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
-    var rootTabBarController: RootTabBarController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +34,14 @@ class ImportDataPopupViewController: UIViewController {
         if (completedDownloads == CovidDataManager.shared.apiUrls.count){
             // All downlaods completed.
             DispatchQueue.main.async {
+                let rootViewController = UIApplication.shared.windows.first!.rootViewController as! RootTabBarController
                 self.activitySpinner.stopAnimating()
                 self.activitySpinner.isHidden = true
                 self.continueButton.isHidden = false
-                if (self.rootTabBarController != nil){
-                    // TODO: Will break if order of tabs changes.
-                    let homeVC = (self.rootTabBarController!.viewControllers?.first as! HomeViewController)
-                    homeVC.dataTypeChanged()
-                }
+                // TODO: Will break if order of tabs changes.
+                let homeVC = (rootViewController.viewControllers?.first as! HomeViewController)
+                homeVC.updateInteractiveMapData()
+                homeVC.dataTypeChanged()
             }
         }
     }

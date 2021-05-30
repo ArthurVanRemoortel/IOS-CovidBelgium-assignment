@@ -105,7 +105,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.87052071090000005" green="0.83534091710000002" blue="0.81951057910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="covidCentrumCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="covidCentrumCell" rowHeight="70" id="Zuj-Ek-ZZz" customClass="CentrumTableViewCell" customModule="EhB_IOS_Werkstuk_1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="covidCentrumCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="covidCentrumCell" rowHeight="70" id="Zuj-Ek-ZZz" customClass="CentrumTableViewCell" customModule="EhB_IOS_Werkstuk2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zuj-Ek-ZZz" id="rK3-6v-FPP">
@@ -333,6 +333,7 @@
                         <outlet property="activitySpinner" destination="4cI-d8-wN9" id="Pd6-gB-kkf"/>
                         <outlet property="continueButton" destination="cVS-tv-CFv" id="Z7t-nw-ZmX"/>
                         <outlet property="descriptionLabel" destination="6Wi-Wt-tRr" id="usZ-i7-axy"/>
+                        <outlet property="titleLabel" destination="dm0-zw-h3N" id="1Ed-hn-GUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chb-QT-wgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

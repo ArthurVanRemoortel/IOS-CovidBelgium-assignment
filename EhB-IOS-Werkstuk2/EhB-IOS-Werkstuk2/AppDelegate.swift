@@ -12,8 +12,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var isFirstLauch = false
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //self.resetFirstLaunch() // TODO: Development only. Resets the database.
-        //sleep(5) // TODO: Development only. Dirty fix to prevent possible concurrency issue???
+        self.resetFirstLaunch() // TODO: Development only. Resets the database.
         isFirstLauch = self.startupCheck()
         return true
     }
@@ -69,21 +68,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    
     func resetFirstLaunch() {
         // TODO: Development only. Remove this.
         UserDefaults.standard.set(false, forKey: "launchedBefore")
-        
-        let context = persistentContainer.viewContext
-        do {
-            for toDelEntity in ["Vaccination", "Case", "Test"] {
-                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: toDelEntity)
-                try context.execute(NSBatchDeleteRequest(fetchRequest: fetchRequest))
-                print("Deleted all \(toDelEntity)")
-            }
-        } catch {
-            print("Could to clear database.")
-        }
+        CovidDataManager.shared.deleteDatabaseContents(context: persistentContainer.viewContext)
     }
 
 }
