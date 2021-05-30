@@ -34,6 +34,8 @@ class ImportDataPopupViewController: UIViewController {
         if (completedDownloads == CovidDataManager.shared.apiUrls.count){
             // All downlaods completed.
             DispatchQueue.main.async {
+                UserDefaults.standard.set(Date(), forKey: "lastUpdateDate")
+                
                 let rootViewController = UIApplication.shared.windows.first!.rootViewController as! RootTabBarController
                 self.activitySpinner.stopAnimating()
                 self.activitySpinner.isHidden = true
@@ -42,6 +44,7 @@ class ImportDataPopupViewController: UIViewController {
                 let homeVC = (rootViewController.viewControllers?.first as! HomeViewController)
                 homeVC.updateInteractiveMapData()
                 homeVC.dataTypeChanged()
+                homeVC.updateLastUpdateDateLabel()
             }
         }
     }

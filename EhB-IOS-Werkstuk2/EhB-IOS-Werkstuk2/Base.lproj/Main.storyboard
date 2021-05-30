@@ -555,6 +555,7 @@
                         <outlet property="chartLabel" destination="ACv-oy-Xl8" id="ywf-0v-U1q"/>
                         <outlet property="dataTypeSegmentControl" destination="zzd-1W-GuN" id="fBv-F7-B8f"/>
                         <outlet property="hintLabel" destination="juo-I6-cwr" id="o3M-4b-1Ld"/>
+                        <outlet property="lastUpdateLabel" destination="LTg-n6-GbO" id="36P-k4-8ab"/>
                         <outlet property="selectionLineChart" destination="SDf-w8-Sie" id="wmM-py-Akn"/>
                     </connections>
                 </viewController>

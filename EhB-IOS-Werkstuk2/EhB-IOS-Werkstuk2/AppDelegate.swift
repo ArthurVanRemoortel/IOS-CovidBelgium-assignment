@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isFirstLauch = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // self.resetFirstLaunch() // TODO: Development only. Resets the database.
+        self.resetFirstLaunch() // TODO: Development only. Resets the database.
         isFirstLauch = self.startupCheck()
         return true
     }
@@ -70,6 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func resetFirstLaunch() {
         // TODO: Development only. Remove this.
         UserDefaults.standard.set(false, forKey: "launchedBefore")
+        UserDefaults.standard.set(nil, forKey: "lastUpdateDate")
         CovidDataManager.shared.deleteDatabaseContents(context: persistentContainer.viewContext)
     }
 

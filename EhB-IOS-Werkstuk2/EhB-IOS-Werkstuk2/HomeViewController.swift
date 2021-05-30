@@ -19,6 +19,7 @@ class HomeViewController: UIViewController, ChartViewDelegate {
     @IBOutlet var belgiumMapView: UIView!
     @IBOutlet var selectionLineChart: LineChartView!
     @IBOutlet var hintLabel: UILabel!
+    @IBOutlet var lastUpdateLabel: UILabel!
     var selectedMapRegion: (String, CAShapeLayer?) = ("Belgium", nil)
     var interactiveMapview: FSInteractiveMapView?
     
@@ -27,6 +28,19 @@ class HomeViewController: UIViewController, ChartViewDelegate {
         setupChart()
         initInteractiveMap()
         dataTypeChanged()
+        updateLastUpdateDateLabel()
+        
+    }
+    
+    func updateLastUpdateDateLabel(){
+        let dateValue = UserDefaults.standard.object(forKey: "lastUpdateDate")
+        if (dateValue != nil){
+            let df = DateFormatter()
+            df.dateFormat = "dd/MM/yyyy HH:mm"
+            lastUpdateLabel.text = "Last Update: \(df.string(from: dateValue as! Date))"
+        } else {
+            lastUpdateLabel.text = "Last Update: Unknown"
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
