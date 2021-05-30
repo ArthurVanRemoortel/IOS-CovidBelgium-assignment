@@ -39,7 +39,7 @@ class CovidCentrum{
     }
 }
 
-enum FAQCategory: String {
+enum FAQCategory: String, CaseIterable {
     case general = "general"
     case vaccine = "vaccine"
 }
@@ -74,8 +74,8 @@ class CovidDataManager {
         CovidCentrum(naam: "Centrum Schaarbeek", fotoNaam: "Schaarbeek", telefoon: "1234", coordinaat: (50.8662653, 4.38215660000001), straat: "Algemeen Stemrechtlaan", huisNr: "0", gemeente: "Schaarbeek", postcode: 1030),
     ]
     
-    static var covidFAQs: [CovidFAQ] = []
-    
+    static var covidFAQs: [CovidFAQ] = loadFAQsFromJson()
+
     static let shared: CovidDataManager = {
         // Creates a singleton object from which API calls are made and data is stored.
         let instance = CovidDataManager()
@@ -85,11 +85,10 @@ class CovidDataManager {
             "https://epistat.sciensano.be/Data/COVID19BE_tests.json" : instance.saveTestsToCoreData,
             "https://epistat.sciensano.be/Data/COVID19BE_VACC.json" : instance.saveVaccinationsToCoreData,
         ]
-        covidFAQs = instance.loadFAQsFromJson()
         return instance
     }()
     
-    func loadFAQsFromJson() -> [CovidFAQ]{
+    static func loadFAQsFromJson() -> [CovidFAQ]{
         // From https://stackoverflow.com/a/24411014
         var faqs: [CovidFAQ] = []
         if let path = Bundle.main.path(forResource: "covidFAQ", ofType: "json") {
