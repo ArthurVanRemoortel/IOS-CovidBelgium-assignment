@@ -7,20 +7,32 @@
 
 import UIKit
 
-class DataViewController: UIViewController {
+class FAQViewController: UIViewController {
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var answerLabel: UILabel!
+    @IBOutlet var linkLabel: UILabel!
+    @IBOutlet var linkHeader: UILabel!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var covidFAQ: CovidFAQ?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        questionLabel.text = covidFAQ?.question
+        answerLabel.text = covidFAQ?.answer
+        // Only support one link right now.
+        if (covidFAQ?.links.count != 0){
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.openLink))
+            linkLabel.isUserInteractionEnabled = true
+            linkLabel.text = covidFAQ?.links.first?.absoluteString
+            linkLabel.addGestureRecognizer(tap)
+            print("added tap")
+        } else {
+            linkHeader.text = ""
+        }
     }
-
-    @IBAction func updateData(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let importViewController = storyBoard.instantiateViewController(withIdentifier: "ImportDataPopupViewController") as! ImportDataPopupViewController
-        CovidDataManager.shared.deleteDatabaseContents(context: appDelegate.persistentContainer.viewContext)
-        self.present(importViewController, animated: true, completion: nil)
-        importViewController.titleLabel.text = "Updating"
-        importViewController.descriptionLabel.text = "You chose to update the database. This will download an updated dataset and will not take long."
+    
+    @objc func openLink(){
+        print("Hello???")
+        UIApplication.shared.open(covidFAQ!.links.first!)
     }
 }

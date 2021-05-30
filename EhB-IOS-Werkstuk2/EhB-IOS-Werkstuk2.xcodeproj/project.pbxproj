@@ -13,7 +13,8 @@
 		8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0953B0265FAF6F005E1F59 /* CovidData.swift */; };
 		8E09762C2662B5DF008ACE8A /* CentrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E09762B2662B5DF008ACE8A /* CentrumViewController.swift */; };
 		8E46AD8B2663AF6C0031557C /* covidFAQ.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E46AD8A2663AF6C0031557C /* covidFAQ.json */; };
-		8ECDA2AB2662790F0019B281 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA2AA2662790F0019B281 /* DataViewController.swift */; };
+		8E46AD902663BAE70031557C /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46AD8F2663BAE70031557C /* FAQTableViewController.swift */; };
+		8ECDA2AB2662790F0019B281 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA2AA2662790F0019B281 /* FAQViewController.swift */; };
 		8ECDA2AF26627FF40019B281 /* VaccinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */; };
 		8EE9340326600243006C87C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9340226600243006C87C8 /* Utils.swift */; };
 		8EE9340626612CF2006C87C8 /* ImportDataPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */; };
@@ -35,7 +36,8 @@
 		8E0953B0265FAF6F005E1F59 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 		8E09762B2662B5DF008ACE8A /* CentrumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentrumViewController.swift; sourceTree = "<group>"; };
 		8E46AD8A2663AF6C0031557C /* covidFAQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = covidFAQ.json; sourceTree = "<group>"; };
-		8ECDA2AA2662790F0019B281 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		8E46AD8F2663BAE70031557C /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
+		8ECDA2AA2662790F0019B281 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinesViewController.swift; sourceTree = "<group>"; };
 		8EE9340226600243006C87C8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDataPopupViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +117,8 @@
 				8EF93865265E83A500B3BE82 /* RootTabBarController.swift */,
 				8E09538B265E9D4E005E1F59 /* HomeViewController.swift */,
 				8EE9340526612CF2006C87C8 /* ImportDataPopupViewController.swift */,
-				8ECDA2AA2662790F0019B281 /* DataViewController.swift */,
+				8E46AD8F2663BAE70031557C /* FAQTableViewController.swift */,
+				8ECDA2AA2662790F0019B281 /* FAQViewController.swift */,
 				8ECDA2AE26627FF40019B281 /* VaccinesViewController.swift */,
 				8EF93867265E83A500B3BE82 /* Main.storyboard */,
 				8EF9386D265E83A700B3BE82 /* Assets.xcassets */,
@@ -246,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E09538C265E9D4E005E1F59 /* HomeViewController.swift in Sources */,
-				8ECDA2AB2662790F0019B281 /* DataViewController.swift in Sources */,
+				8ECDA2AB2662790F0019B281 /* FAQViewController.swift in Sources */,
 				8ECDA2AF26627FF40019B281 /* VaccinesViewController.swift in Sources */,
 				8EF9386C265E83A500B3BE82 /* EhB_IOS_Werkstuk2.xcdatamodeld in Sources */,
 				8E09762C2662B5DF008ACE8A /* CentrumViewController.swift in Sources */,
@@ -255,6 +258,7 @@
 				8E0953B1265FAF6F005E1F59 /* CovidData.swift in Sources */,
 				8EF93862265E83A500B3BE82 /* AppDelegate.swift in Sources */,
 				8EE9340626612CF2006C87C8 /* ImportDataPopupViewController.swift in Sources */,
+				8E46AD902663BAE70031557C /* FAQTableViewController.swift in Sources */,
 				8EF93864265E83A500B3BE82 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
